@@ -1,0 +1,137 @@
+/*=============================================================================
+  Global
+=============================================================================*/
+/* 1) Border-box reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2) Remove default body margin & set a base font */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa; /* Light gray background */
+  color: #333;
+}
+
+/* 3) Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/*=============================================================================
+  Navbar overrides
+=============================================================================*/
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar-brand span {
+  color: #8daf00; /* Brand green */
+  font-size: 1.25rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #f58220; /* Brand orange */
+  text-decoration: none;
+}
+
+/*=============================================================================
+  Hero Banner
+=============================================================================*/
+.hero-banner {
+  position: relative;
+  background: url('../images/hero.jpg') no-repeat center/cover;
+  height: 75vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0; /* top/right/bottom/left:0 */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Stack text + buttons above the overlay */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* Tweak heading + lead sizes on smaller screens */
+.hero-content .display-4 {
+  font-size: 2.5rem;
+}
+
+/*=============================================================================
+  Buttons
+=============================================================================*/
+.btn-primary {
+  background-color: #f58220;
+  border-color: #f58220;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #e06f1a;
+  border-color: #e06f1a;
+}
+
+/* Service card hover lift */
+#services .card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Tighter card-body padding for mobile */
+@media (max-width: 576px) {
+  #services .card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* in css/styles.css */
+.text-brand {
+  color: #F58220 !important;
+}
+
+/* Testimonial quote styling */
+#testimonials blockquote {
+  margin: 0 auto 1.5rem;
+  max-width: 700px;
+  font-style: italic;
+  color: #555;
+}
+
+#testimonials .blockquote-footer {
+  color: #777;
+  margin-bottom: 0;
+}
+
+/* Contact section background */
+#contact {
+  background-color: #f8f9fa;
+}
+
+/* Brand-colored icons */
+#contact .text-brand {
+  color: #F58220 !important;
+}
+
+/* Form “Send Message” button */
+#contact .btn-primary {
+  min-width: 150px;
+}
+
