@@ -1,76 +1,47 @@
 /**
- * js/scripts.js
- *
- * Custom JavaScript for Sanchez Cleaning site:
- *  - Auto-collapse mobile navbar on link click
- *  - Scrollspy-like active link highlighting
- *  - Structured logging (INFO / DEBUG)
+ * Collapse mobile navbar on nav-link click
+ * Highlight the “active” link based on the current page
+ * Simple INFO/DEBUG logger
  */
-
 'use strict';
-
 (() => {
-  // ─── Logging Utility ──────────────────────────────────────────────────
-  const LogLevel = { DEBUG: 1, INFO: 2, WARN: 3, ERROR: 4 };
-  // Change this to LogLevel.DEBUG to see debug messages
+  const LogLevel = { DEBUG:1, INFO:2, WARN:3, ERROR:4 };
   const CURRENT_LOG_LEVEL = LogLevel.INFO;
-
   const Logger = {
-    debug: (...args) => {
-      if (CURRENT_LOG_LEVEL <= LogLevel.DEBUG) console.debug('[DEBUG]', ...args);
-    },
-    info: (...args) => {
-      if (CURRENT_LOG_LEVEL <= LogLevel.INFO) console.info('[INFO]', ...args);
-    },
-    warn: (...args) => {
-      if (CURRENT_LOG_LEVEL <= LogLevel.WARN) console.warn('[WARN]', ...args);
-    },
-    error: (...args) => {
-      if (CURRENT_LOG_LEVEL <= LogLevel.ERROR) console.error('[ERROR]', ...args);
-    },
+    debug:(...a)=>{ if(CURRENT_LOG_LEVEL<=LogLevel.DEBUG) console.debug('[DEBUG]',...a); },
+    info:(...a)=>{ if(CURRENT_LOG_LEVEL<=LogLevel.INFO) console.info('[INFO]',...a); },
+    warn:(...a)=>{ if(CURRENT_LOG_LEVEL<=LogLevel.WARN) console.warn('[WARN]',...a); },
+    error:(...a)=>{ if(CURRENT_LOG_LEVEL<=LogLevel.ERROR) console.error('[ERROR]',...a); }
   };
 
-  document.addEventListener('DOMContentLoaded', () => {
-    Logger.info('DOM fully loaded, initializing scripts');
+  document.addEventListener('DOMContentLoaded', ()=>{
+    Logger.info('Scripts initialized');
 
-    // ─── Auto-collapse Mobile Navbar ───────────────────────────────────
+    // Collapse mobile menu after clicking a link
     const collapseEl = document.getElementById('mainNav');
-    if (collapseEl) {
-      const bsCollapse = new bootstrap.Collapse(collapseEl, { toggle: false });
-      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          // Only collapse if the toggler (hamburger) is visible
-          const toggler = document.querySelector('.navbar-toggler');
-          if (toggler && window.getComputedStyle(toggler).display !== 'none') {
-            Logger.debug('Nav link clicked in mobile view — collapsing navbar');
-            bsCollapse.hide();
-          }
+    if(collapseEl){
+      const bsCollapse = new bootstrap.Collapse(collapseEl, { toggle:false });
+      document.querySelectorAll('.navbar-nav .nav-link')
+        .forEach(link=>{
+          link.addEventListener('click', ()=>{
+            const toggler = document.querySelector('.navbar-toggler');
+            if(toggler && getComputedStyle(toggler).display!=='none'){
+              Logger.debug('Collapsing navbar');
+              bsCollapse.hide();
+            }
+          });
         });
-      });
     }
 
-    // ─── Active Link Highlight on Scroll ────────────────────────────────
-    const sections = document.querySelectorAll('section[id]');
-    const options = {
-      root: null,
-      rootMargin: '0px 0px -50% 0px', // when section top crosses middle of viewport
-      threshold: 0,
-    };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const id = entry.target.id;
-        const navLink = document.querySelector(`.navbar-nav .nav-link[href="#${id}"]`);
-        if (entry.isIntersecting) {
-          Logger.debug(`Section "${id}" entered viewport — setting active link`);
-          document.querySelectorAll('.navbar-nav .nav-link').forEach(link =>
-            link.classList.toggle('active', link === navLink)
-          );
+    // Highlight active nav link
+    const page = location.pathname.split('/').pop() || 'index.html';
+    Logger.debug('Current page:',page);
+    document.querySelectorAll('.navbar-nav .nav-link')
+      .forEach(link=>{
+        if(link.getAttribute('href')===page){
+          link.classList.add('active');
+          Logger.debug('Set active:',page);
         }
       });
-    }, options);
-
-    sections.forEach(section => observer.observe(section));
-    Logger.info('Scrollspy observer initialized for sections:', [...sections].map(s => s.id));
   });
 })();

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – Sanchez Cleaning</title>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" crossorigin="anonymous"
+  />
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.ico" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <!-- (same as index.html) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Logo" width="40" height="40" class="me-2"/>
+        <span class="fw-bold">Sanchez Cleaning</span>
+      </a>
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#mainNav" 
+        aria-controls="mainNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-none d-lg-flex align-items-center ms-4">
+          <i class="bi bi-telephone-fill me-1"></i>
+          <a href="tel:+9729005821" class="me-3">+972-900-5821</a>
+          <i class="bi bi-envelope-fill me-1"></i>
+          <a href="mailto:alvizurezvero28@gmail.com">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN: Services Grid -->
+  <main class="flex-grow-1">
+    <section id="services" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5">Our Cleaning Services</h2>
+        <div class="row g-4">
+          <!-- Standard Cleaning -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 text-center shadow-sm">
+              <div class="card-body p-4">
+                <i class="bi bi-house-door-fill fs-1 text-brand mb-3"></i>
+                <h5 class="card-title fw-semibold">Standard Cleaning</h5>
+                <p class="card-text text-muted">
+                  Dusting, vacuuming, mopping &amp; tidying surfaces for a fresh home.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Deep Cleaning -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 text-center shadow-sm">
+              <div class="card-body p-4">
+                <i class="bi bi-droplet fs-1 text-brand mb-3"></i>
+                <h5 class="card-title fw-semibold">Deep Cleaning</h5>
+                <p class="card-text text-muted">
+                  Intensive scrubbing: baseboards, vents, under furniture &amp; more.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Move-In / Move-Out -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 text-center shadow-sm">
+              <div class="card-body p-4">
+                <i class="bi bi-box-seam fs-1 text-brand mb-3"></i>
+                <h5 class="card-title fw-semibold">Move-In / Move-Out</h5>
+                <p class="card-text text-muted">
+                  Full cleaning of empty properties—ready for new tenants or owners.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Window Cleaning -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 text-center shadow-sm">
+              <div class="card-body p-4">
+                <i class="bi bi-window fs-1 text-brand mb-3"></i>
+                <h5 class="card-title fw-semibold">Window Cleaning</h5>
+                <p class="card-text text-muted">
+                  Streak-free inside &amp; out, frames, sills, and tracks polished clean.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-light py-4 text-center mt-auto">
+    <small>&copy; 2025 Sanchez Cleaning</small>
+  </footer>
+
+  <!-- JS -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
