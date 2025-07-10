@@ -1,15 +1,12 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sanchez Cleaning</title>
 
-  <!-- 1) Bootstrap CSS -->
+  <!-- 1) Bootstrap v5 CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -24,9 +21,12 @@
 
   <!-- 3) Your custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
 
+  <!-- 4) Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="d-flex flex-column min-vh-100">
   <!-- ===== Navbar ===== -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
@@ -40,7 +40,6 @@
         />
         <span class="fw-bold">Sanchez Cleaning</span>
       </a>
-
       <button
         class="navbar-toggler"
         type="button"
@@ -52,21 +51,12 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#testimonials">Testimonials</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <div class="d-none d-lg-flex align-items-center ms-4">
           <i class="bi bi-telephone-fill me-1"></i>
@@ -81,17 +71,12 @@
   <!-- ===== Hero Banner ===== -->
   <section class="hero-banner">
     <div class="hero-overlay"></div>
-
     <div class="hero-content container text-center">
-      <h1 class="display-4 fw-bold mb-3">
-        Professional Home Cleaning Services
-      </h1>
+      <h1 class="display-4 fw-bold mb-3">Professional Home Cleaning Services</h1>
       <p class="lead mb-4">
         Sparkling results every time—weekly, bi-weekly, or one-time.
       </p>
-      <a href="#contact" class="btn btn-lg btn-primary me-2">
-        Get a Free Quote
-      </a>
+      <a href="#contact" class="btn btn-lg btn-primary me-2">Get a Free Quote</a>
       <a href="tel:+9729005821" class="btn btn-lg btn-outline-light">
         Call Us: +972 900 5821
       </a>
@@ -99,180 +84,135 @@
   </section>
 
   <!-- ===== Services Section ===== -->
-<section id="services" class="py-5 bg-white">
-  <div class="container">
-    <!-- Section title -->
-    <h2 class="text-center fw-bold mb-5">Our Cleaning Services</h2>
-
-    <div class="row g-4">
-      <!-- Service item -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 border-0 text-center shadow-sm">
-          <div class="card-body p-4">
-            <!-- Icon (Bootstrap Icon example) -->
-            <i  class="bi bi-house-door-fill fs-1 text-brand mb-3"></i>
-            <h5 class="card-title fw-semibold">Standard Cleaning</h5>
-            <p class="card-text text-muted">
-              Dusting, vacuuming, mopping & tidying surfaces for a fresh home.
-            </p>
+  <section id="services" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Our Cleaning Services</h2>
+      <div class="row g-4">
+        <!-- Standard Cleaning -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 text-center shadow-sm">
+            <div class="card-body p-4">
+              <i class="bi bi-house-door-fill fs-1 text-brand mb-3"></i>
+              <h5 class="card-title fw-semibold">Standard Cleaning</h5>
+              <p class="card-text text-muted">
+                Dusting, vacuuming, mopping &amp; tidying surfaces for a fresh home.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- Repeat for additional services -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 border-0 text-center shadow-sm">
-          <div class="card-body p-4">
-            <i class="bi bi-droplet  fs-1 text-brand mb-3"></i>
-            <h5 class="card-title fw-semibold">Deep Cleaning</h5>
-            <p class="card-text text-muted">
-              Intensive scrubbing: baseboards, vents, under furniture & more.
-            </p>
+        <!-- Deep Cleaning -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 text-center shadow-sm">
+            <div class="card-body p-4">
+              <i class="bi bi-droplet fs-1 text-brand mb-3"></i>
+              <h5 class="card-title fw-semibold">Deep Cleaning</h5>
+              <p class="card-text text-muted">
+                Intensive scrubbing: baseboards, vents, under furniture &amp; more.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 border-0 text-center shadow-sm">
-          <div class="card-body p-4">
-            <i class="bi bi-box-seam fs-1 text-brand mb-3"></i>
-            <h5 class="card-title fw-semibold">Move-In / Move-Out</h5>
-            <p class="card-text text-muted">
-              Full cleaning of empty properties—ready for new tenants or owners.
-            </p>
+        <!-- Move-In/Move-Out -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 text-center shadow-sm">
+            <div class="card-body p-4">
+              <i class="bi bi-box-seam fs-1 text-brand mb-3"></i>
+              <h5 class="card-title fw-semibold">Move-In / Move-Out</h5>
+              <p class="card-text text-muted">
+                Full cleaning of empty properties—ready for new tenants or owners.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 border-0 text-center shadow-sm">
-          <div class="card-body p-4">
-            <i class="bi bi-window fs-1 text-brand mb-3"></i>
-            <h5 class="card-title fw-semibold">Window Cleaning</h5>
-            <p class="card-text text-muted">
-              Streak-free inside & out, frames, sills, and tracks polished clean.
-            </p>
+        <!-- Window Cleaning -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 text-center shadow-sm">
+            <div class="card-body p-4">
+              <i class="bi bi-window fs-1 text-brand mb-3"></i>
+              <h5 class="card-title fw-semibold">Window Cleaning</h5>
+              <p class="card-text text-muted">
+                Streak-free inside &amp; out, frames, sills, and tracks polished clean.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== Testimonials ===== -->
-<section id="testimonials" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5">What Our Clients Say</h2>
-
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-
-        <!-- Testimonial 1 -->
-        <div class="carousel-item active text-center px-4">
-          <blockquote class="blockquote">
-            <p class="fs-5">
-              “Sanchez Cleaning transformed my home—spotless, friendly, and on time. Highly recommend!”
-            </p>
-          </blockquote>
-          <footer class="blockquote-footer">Jane Doe, <cite title="Source Title">Austin, TX</cite></footer>
+  <!-- ===== Testimonials ===== -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">What Our Clients Say</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center px-4">
+            <blockquote class="blockquote">
+              <p class="fs-5">
+                “Sanchez Cleaning transformed my home—spotless, friendly, and on time. Highly recommend!”
+              </p>
+            </blockquote>
+            <footer class="blockquote-footer">Jane Doe, <cite>Austin, TX</cite></footer>
+          </div>
+          <div class="carousel-item text-center px-4">
+            <blockquote class="blockquote">
+              <p class="fs-5">
+                “Our Airbnb turnovers have never been easier thanks to their deep‐clean service.”
+              </p>
+            </blockquote>
+            <footer class="blockquote-footer">John Smith, <cite>Dallas, TX</cite></footer>
+          </div>
         </div>
-
-        <!-- Testimonial 2 -->
-        <div class="carousel-item text-center px-4">
-          <blockquote class="blockquote">
-            <p class="fs-5">
-              “Our Airbnb turnovers have never been easier thanks to their deep‐clean service.”
-            </p>
-          </blockquote>
-          <footer class="blockquote-footer">John Smith, <cite title="Source Title">Dallas, TX</cite></footer>
-        </div>
-
-        <!-- add more `.carousel-item` as needed -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+    </div>
+  </section>
 
-      <!-- Controls -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#testimonialCarousel"
-        data-bs-slide="prev"
+  <!-- ===== Schedule a Cleaning (Calendly CTA) ===== -->
+  <section id="contact" class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Ready for a Sparkling Clean?</h2>
+      <p class="lead mb-4">
+        Choose a date &amp; time that works for you, and we'll take care of the rest!
+      </p>
+      <a
+        href="https://calendly.com/YourUsername/cleaning-consult"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-lg btn-light"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#testimonialCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+        Book Your Cleaning Now
+      </a>
     </div>
-  </div>
-</section>
-
-<!-- ===== Contact ===== -->
-<section id="contact" class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-4">Get in Touch</h2>
-    <div class="row g-4">
-      <!-- Contact Info -->
-      <div class="col-md-5">
-        <div class="p-4 bg-white shadow-sm rounded">
-          <h5 class="fw-semibold mb-3">Contact Info</h5>
-          <p><i class="bi bi-telephone-fill me-2 text-brand"></i>+972-900-5821</p>
-          <p><i class="bi bi-envelope-fill me-2 text-brand"></i><a href="mailto:alvizurezvero28@gmail.com">alvizurezvero28@gmail.com</a></p>
-          <p><i class="bi bi-geo-alt-fill me-2 text-brand"></i>123 Main Street, Austin, TX</p>
-          <p><i class="bi bi-clock-fill me-2 text-brand"></i>Mon–Fri: 8 AM–6 PM</p>
-        </div>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="col-md-7">
-        <div class="p-4 bg-white shadow-sm rounded">
-          <form action="#" method="POST">
-            <div class="mb-3">
-              <label for="name" class="form-label">Your Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Jane Doe" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Your Email</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="How can we help?" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- ===== Placeholder for future sections ===== -->
-  <main class="py-5">
-    <section id="services">
-      <div class="container">
-        <!-- Services grid goes here -->
-      </div>
-    </section>
-    <section id="testimonials">
-      <div class="container">
-        <!-- Testimonials go here -->
-      </div>
-    </section>
-    <section id="contact">
-      <div class="container">
-        <!-- Contact form / info goes here -->
-      </div>
-    </section>
-  </main>
+  </section>
 
   <!-- ===== Footer ===== -->
-  <footer class="bg-light py-4 mt-auto">
-    <div class="container text-center">
-      <small>&copy; 2025 Sanche
+  <footer class="bg-light py-4 text-center">
+    <small>&copy; 2025 Sanchez Cleaning</small>
+  </footer>
+
+  <!-- Bootstrap JS Bundle + your custom scripts.js -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

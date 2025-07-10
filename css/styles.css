@@ -1,25 +1,25 @@
+/* css/styles.css */
+
 /*=============================================================================
-  Global
+  Global resets & base layout
 =============================================================================*/
-/* 1) Border-box reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
-/* 2) Remove default body margin & set a base font */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f8f9fa; /* Light gray background */
-  color: #333;
-}
-
-/* 3) Smooth scroll for anchor links */
 html {
   scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 /*=============================================================================
@@ -28,20 +28,17 @@ html {
 .navbar {
   padding: 1rem 0;
 }
-
 .navbar-brand span {
-  color: #8daf00; /* Brand green */
+  color: #8daf00;
   font-size: 1.25rem;
 }
-
 .nav-link {
   font-weight: 500;
   color: #333;
 }
-
 .nav-link:hover,
 .nav-link:focus {
-  color: #f58220; /* Brand orange */
+  color: #f58220;
   text-decoration: none;
 }
 
@@ -56,21 +53,17 @@ html {
   display: flex;
   align-items: center;
 }
-
 .hero-overlay {
   position: absolute;
-  inset: 0; /* top/right/bottom/left:0 */
+  inset: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-
-/* Stack text + buttons above the overlay */
 .hero-content {
   position: relative;
   z-index: 1;
+  text-align: center;
   color: #fff;
 }
-
-/* Tweak heading + lead sizes on smaller screens */
 .hero-content .display-4 {
   font-size: 2.5rem;
 }
@@ -82,56 +75,78 @@ html {
   background-color: #f58220;
   border-color: #f58220;
 }
-
 .btn-primary:hover,
 .btn-primary:focus {
   background-color: #e06f1a;
   border-color: #e06f1a;
 }
 
-/* Service card hover lift */
-#services .card:hover {
-  transform: translateY(-5px);
+/*=============================================================================
+  Services Section
+=============================================================================*/
+#services .card {
   transition: transform 0.2s ease-in-out;
 }
-
-/* Tighter card-body padding for mobile */
+#services .card:hover {
+  transform: translateY(-5px);
+}
 @media (max-width: 576px) {
   #services .card-body {
     padding: 1.5rem;
   }
 }
-
-/* in css/styles.css */
 .text-brand {
-  color: #F58220 !important;
+  color: #f58220 !important;
 }
 
-/* Testimonial quote styling */
+/*=============================================================================
+  Testimonials
+=============================================================================*/
 #testimonials blockquote {
   margin: 0 auto 1.5rem;
   max-width: 700px;
   font-style: italic;
   color: #555;
 }
-
 #testimonials .blockquote-footer {
   color: #777;
   margin-bottom: 0;
 }
 
-/* Contact section background */
-#contact {
+/*=============================================================================
+  Contact CTA (Calendly link)
+=============================================================================*/
+/* Override Bootstrap primary to brand-orange for this section */
+#contact.bg-primary {
+  background-color: #f58220 !important;
+}
+#contact .btn-light {
+  background-color: #fff;
+  color: #f58220;
+  border: 2px solid #fff;
+  transition: background-color 0.2s, color 0.2s;
+}
+#contact .btn-light:hover,
+#contact .btn-light:focus {
+  background-color: #f0f0f0;
+  color: #e06f1a;
+  text-decoration: none;
+}
+@media (max-width: 576px) {
+  #contact .lead {
+    font-size: 1rem;
+  }
+  #contact .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/*=============================================================================
+  Footer
+=============================================================================*/
+footer {
+  margin-top: auto;
   background-color: #f8f9fa;
+  color: #555;
 }
-
-/* Brand-colored icons */
-#contact .text-brand {
-  color: #F58220 !important;
-}
-
-/* Form “Send Message” button */
-#contact .btn-primary {
-  min-width: 150px;
-}
-
