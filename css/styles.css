@@ -355,3 +355,90 @@ footer {
   margin-top: auto;
   padding: 1rem 0;
 }
+
+/*=============================================================================
+  Mobile tweaks (max-width: 576px)
+=============================================================================*/
+@media (max-width: 576px) {
+
+  /* Hero text scales back */
+  .hero-content .display-4 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    padding: 0 1rem;
+  }
+  .hero-content .lead {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* Tighten the proof-strip into a column */
+  .proof-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+    padding: 0.25rem 0;
+  }
+  .proof-strip span {
+    margin: 0;
+  }
+
+  /* How-It-Works: smaller icons & text */
+  .how-it-works .bi {
+    font-size: 2rem !important;
+  }
+  .how-it-works h4 {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+  .how-it-works p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0 0.5rem;
+  }
+
+  /* About image & text tweaks */
+  #about .rounded-circle {
+    max-width: 150px;
+    margin: 0 auto 1rem;
+  }
+  #about h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #about p {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  #about .row.align-items-center {
+    flex-direction: column;
+  }
+
+  /* Sticky button sits above iOS home-indicator */
+  .book-now-sticky {
+    bottom: calc(env(safe-area-inset-bottom, 1rem) + 0.5rem);
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    max-width: calc(100% - 2rem);
+    text-align: center;
+    padding: 0.75rem;
+  }
+
+  /* Navbar brand smaller */
+  .brand-logo {
+    height: 36px;
+  }
+  .brand-text {
+    font-size: 1.25rem;
+  }
+
+  /* Footer padding less */
+  footer {
+    padding: 0.75rem 0;
+    font-size: 0.85rem;
+  }
+}
