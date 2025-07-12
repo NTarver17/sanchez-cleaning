@@ -1,3 +1,5 @@
+// js/scripts.js
+
 /**
  * Collapse mobile navbar on nav-link click
  * Highlight the “active” link based on the current page
@@ -45,3 +47,4 @@
       });
   });
 })();
+// End of scripts.js
