@@ -1,6 +1,8 @@
 /*=============================================================================
   Global resets & layout
 =============================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -63,7 +65,8 @@ body {
   color: #fff;
 }
 .hero-content .display-4 {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
+  font-family: 'Dancing Script', cursive;
 }
 .hero-content .lead {
   font-size: 1.25rem;
