@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services – Sanchez Cleaning</title>
 
-  <!-- Bootstrap v5 CSS -->
+  <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -16,23 +16,29 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     rel="stylesheet"
   />
-  <!-- Custom CSS -->
+  <!-- Your Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" />
 </head>
 <body class="d-flex flex-column min-vh-100">
-  <!-- NAVBAR -->
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/logo.png" alt="Logo" width="40" height="40" class="me-2"/>
-        <span class="fw-bold">Sanchez Cleaning</span>
+        <img src="images/logo.png" class="brand-logo" alt="Logo" />
+        <span class="brand-text">Sanchez Cleaning</span>
       </a>
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#mainNav"
-              aria-controls="mainNav" aria-expanded="false"
-              aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
@@ -46,105 +52,109 @@
     </div>
   </nav>
 
-  <!-- SERVICES -->
+  <!-- Hero -->
+  <section class="services-hero">
+    <div class="container text-center text-white">
+      <h1 class="display-5 fw-bold">Reclaim Your Time & Serenity</h1>
+      <p class="lead">
+        From upkeep to full resets, we tackle your toughest cleaning challenges so you can relax and recharge.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
   <main class="flex-grow-1">
-    <section id="services" class="py-5 bg-white">
+    <section class="py-5 bg-light">
       <div class="container">
-        <h2 class="text-center fw-bold mb-4">Our Cleaning Services</h2>
-
-        <!-- Basic Cleaning -->
-        <div class="row service-item align-items-start mb-5">
-          <div class="col-md-6">
-            <h3 class="fw-semibold">Basic Cleaning</h3>
-            <p class="text-muted">
-              Our Basic Cleaning service is designed to keep your home or office fresh, tidy, and welcoming. We cover all essential tasks like dusting, sweeping, vacuuming, mopping, and disinfecting high-touch surfaces. Perfect for regular upkeep, this service focuses on maintaining a clean and healthy space without the deep detail of a full deep clean.
-            </p>
+        <div class="row g-4">
+          <!-- Basic Cleaning -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card h-100">
+              <div class="service-icon"><i class="bi bi-house-door-fill"></i></div>
+              <h3>Basic Cleaning</h3>
+              <p>Rediscover joy in a tidy home—perfect for weekly or monthly upkeep.</p>
+              <ul class="feature-list">
+                <li>Dusting all surfaces</li>
+                <li>Vacuum & mop floors</li>
+                <li>Wipe countertops & tables</li>
+                <li>Sanitize high-touch areas</li>
+                <li>Empty trash & replace liners</li>
+                <li>Shine mirrors & glass</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-6">
-            <ul class="list-unstyled feature-list">
-              <li>Dusting all surfaces</li>
-              <li>Vacuuming and mopping floors</li>
-              <li>Cleaning countertops & tabletops</li>
-              <li>Sanitizing kitchen & bathroom surfaces</li>
-              <li>Taking out trash and replacing liners</li>
-              <li>Wiping mirrors and glass surfaces</li>
-            </ul>
+          <!-- Deep Cleaning -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card h-100">
+              <div class="service-icon"><i class="bi bi-droplet-half"></i></div>
+              <h3>Deep Cleaning</h3>
+              <p>A top-to-bottom refresh for those days when you need every corner spotless.</p>
+              <ul class="feature-list">
+                <li>Sofa & upholstery vacuuming</li>
+                <li>Dust vents, fans & fixtures</li>
+                <li>Sweep under carpets</li>
+                <li>Polish under furniture</li>
+                <li>Deep kitchen & bath scrub</li>
+                <li>Detail window tracks & sills</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Additional Services -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card h-100">
+              <div class="service-icon"><i class="bi bi-plus-circle-fill"></i></div>
+              <h3>Additional Services</h3>
+              <p>Customize your clean—add exactly what you need.</p>
+              <ul class="feature-list">
+                <li>Extra room or bath</li>
+                <li>Laundry & linen refresh</li>
+                <li>Oven & fridge detail</li>
+                <li>Garage & storage tidy</li>
+                <li>Change bed sheets</li>
+                <li>Mini-bar area care</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Move-In / Move-Out -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card h-100">
+              <div class="service-icon"><i class="bi bi-arrow-left-right-circle-fill"></i></div>
+              <h3>Move-In / Move-Out</h3>
+              <p>Stress-free transitions—every corner cleaned for your new beginning.</p>
+              <ul class="feature-list">
+                <li>Cabinets (in/out)</li>
+                <li>Appliance interiors</li>
+                <li>Window sill & track detailing</li>
+                <li>Final sweep, mop & touch-ups</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <!-- Deep Cleaning -->
-        <div class="row service-item align-items-start mb-5">
-          <div class="col-md-6">
-            <h3 class="fw-semibold">Deep Cleaning</h3>
-            <p class="text-muted">
-              Our Deep Cleaning service is designed for homes or offices that need extra attention and a full refresh from top to bottom. This service includes everything in our Basic Cleaning, plus detailed work in hard-to-reach areas and high-traffic zones. We scrub, sanitize, and polish every surface to eliminate built-up dust, grime, and bacteria; leaving your space feeling brand new.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <ul class="list-unstyled feature-list">
-              <li>Sofa vacuuming</li>
-              <li>Dust lamps, vents, and fan blades</li>
-              <li>Under carpet sweep</li>
-              <li>Clean/polish under and behind furniture</li>
-              <li>Dust shelves and cabinets</li>
-              <li>Take care of dirty dishes</li>
-              <li>Windows, doors, and baseboard cleaning</li>
-              <li>Mini bar areas</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Additional Services -->
-        <div class="row service-item align-items-start mb-5">
-          <div class="col-md-6">
-            <h3 class="fw-semibold">Additional Services</h3>
-            <p class="text-muted">
-              Need something extra? We’ve got you covered with these add-ons:
-            </p>
-          </div>
-          <div class="col-md-6">
-            <ul class="list-unstyled feature-list">
-              <li>Extra Room Cleaning</li>
-              <li>Bath Deep Clean</li>
-              <li>Laundry Service</li>
-              <li>Oven Cleaning</li>
-              <li>Fridge Cleaning</li>
-              <li>Garage Cleaning</li>
-              <li>Change Bed Sheets</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Move-In / Move-Out (unchanged) -->
-        <div class="row service-item align-items-start mb-5">
-          <div class="col-md-6">
-            <h3 class="fw-semibold">Move-In / Move-Out</h3>
-            <p class="text-muted">
-              Full cleaning of empty properties—ready for new tenants or owners.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <ul class="list-unstyled feature-list">
-              <li>Clean inside/outside cabinets</li>
-              <li>Appliance interiors (oven/fridge)</li>
-              <li>Wash windows, sills & tracks</li>
-              <li>Final floor sweep & mop</li>
-            </ul>
-          </div>
+        <!-- CTA -->
+        <div class="text-center mt-5">
+          <a
+            href="https://calendly.com/alvizurezvero28/30min"
+            target="_blank"
+            class="btn btn-lg btn-primary px-5"
+          >
+            Book Your Cleaning
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="bg-light py-4 text-center mt-auto">
     <small>&copy; 2025 Sanchez Cleaning</small>
   </footer>
 
-  <!-- BOOTSTRAP JS & SCRIPTS -->
+  <!-- Bootstrap JS & Custom JS -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"
+  ></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
