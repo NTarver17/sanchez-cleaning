@@ -123,6 +123,16 @@ body {
   font-style: italic;
 }
 
+#testimonials .card {
+  transition: transform 0.2s ease;
+}
+#testimonials .card:hover {
+  transform: translateY(-5px);
+}
+#testimonials img {
+  object-fit: cover;
+}
+
 /*=============================================================================
   5. Proof-Strip
 =============================================================================*/
