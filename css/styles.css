@@ -109,6 +109,21 @@ body {
 }
 
 /*=============================================================================
+  4. Gallery Section*/
+
+#gallery img {
+  width: 100%;       /* keeps it responsive */
+  max-width: 400px;  /* caps it at 300px wide */
+  margin: 0 auto;    /* center inside its column */
+  display: block;    /* ensure margin auto works */
+}
+
+#gallery p {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+/*=============================================================================
   5. Proof-Strip
 =============================================================================*/
 .proof-strip {
@@ -442,3 +457,4 @@ footer {
     font-size: 0.85rem;
   }
 }
+
