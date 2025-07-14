@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services – Sanchez Cleaning</title>
+  <title>Our Services – Sanchez Cleaning</title>
 
   <!-- Bootstrap CSS -->
   <link
@@ -16,36 +16,35 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     rel="stylesheet"
   />
-<!-- Your Custom CSS -->
+  <!-- AOS CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+  <!-- Your Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
-
   <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body class="d-flex flex-column min-vh-100">
 
- <!-- Offer Banner -->
+  <!-- Offer Banner -->
   <div class="offer-banner text-center text-white py-2">
     <strong>Unlock a Sparkling Home:</strong>
     Save <span class="fw-bold">10%</span> on your first Deep Clean—offer expires <u>Aug 1st</u>!
   </div>
 
-<!-- Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/favicon.ico" class="brand-logo" alt="Logo" />
+        <img src="images/logo.png" alt="Logo" class="brand-logo" />
         <span class="brand-text">Sanchez Cleaning</span>
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNav"
-        aria-controls="mainNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false"
+              aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
@@ -59,109 +58,138 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="services-hero">
-    <div class="container text-center text-white">
-      <h1 class="display-5 fw-bold">Reclaim Your Time & Serenity</h1>
-      <p class="lead">
-        From upkeep to full resets, we tackle your toughest cleaning challenges so you can relax and recharge.
+  <!-- Hero Banner -->
+  <section class="services-hero d-flex align-items-center text-center text-white">
+    <div class="overlay"></div>
+    <div class="container" data-aos="fade-down">
+      <h1 class="display-4 fw-bold mb-3">Transform Your Home Today</h1>
+      <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
+        From light touch-ups to deep detail work, our service packages are built for every need—and every schedule.
       </p>
+      <a
+        href="https://calendly.com/alvizurezvero28/30min"
+        class="btn btn-lg btn-light"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+        target="_blank"
+      >
+        Get a Free Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- Animated Stats -->
+  <section class="stats-section py-5 bg-white">
+    <div class="container">
+      <div class="row text-center gy-4">
+        <div class="col-6 col-md-3" data-aos="fade-up">
+          <div class="stat-number" data-target="3900">0</div>
+          <div class="stat-label">Homes Cleaned</div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number" data-target="1170">0</div>
+          <div class="stat-label">5★ Reviews</div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number" data-target="800">0</div>
+          <div class="stat-label">Repeat Clients</div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Services Grid -->
-  <main class="flex-grow-1">
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="row g-4">
-          <!-- Basic Cleaning -->
-          <div class="col-md-6 col-lg-4">
-            <div class="service-card h-100">
-              <div class="service-icon"><i class="bi bi-house-door-fill"></i></div>
-              <h3>Basic Cleaning</h3>
-              <p>Rediscover joy in a tidy home—perfect for weekly or monthly upkeep.</p>
-              <ul class="feature-list">
-                <li>Dusting all surfaces</li>
-                <li>Vacuum & mop floors</li>
-                <li>Wipe countertops & tables</li>
-                <li>Sanitize high-touch areas</li>
-                <li>Empty trash & replace liners</li>
-                <li>Shine mirrors & glass</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Deep Cleaning -->
-          <div class="col-md-6 col-lg-4">
-            <div class="service-card h-100">
-              <div class="service-icon"><i class="bi bi-droplet-half"></i></div>
-              <h3>Deep Cleaning</h3>
-              <p>A top-to-bottom refresh for those days when you need every corner spotless.</p>
-              <ul class="feature-list">
-                <li>Sofa & upholstery vacuuming</li>
-                <li>Dust vents, fans & fixtures</li>
-                <li>Sweep under carpets</li>
-                <li>Polish under furniture</li>
-                <li>Deep kitchen & bath scrub</li>
-                <li>Detail window tracks & sills</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Additional Services -->
-          <div class="col-md-6 col-lg-4">
-            <div class="service-card h-100">
-              <div class="service-icon"><i class="bi bi-plus-circle-fill"></i></div>
-              <h3>Additional Services</h3>
-              <p>Customize your clean—add exactly what you need.</p>
-              <ul class="feature-list">
-                <li>Extra room or bath</li>
-                <li>Laundry & linen refresh</li>
-                <li>Oven & fridge detail</li>
-                <li>Garage & storage tidy</li>
-                <li>Change bed sheets</li>
-                <li>Mini-bar area care</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Move-In / Move-Out -->
-          <div class="col-md-6 col-lg-4">
-            <div class="service-card h-100">
-              <div class="service-icon"><i class="bi bi-arrow-left-right-circle-fill"></i></div>
-              <h3>Move-In / Move-Out</h3>
-              <p>Stress-free transitions—every corner cleaned for your new beginning.</p>
-              <ul class="feature-list">
-                <li>Cabinets (in/out)</li>
-                <li>Appliance interiors</li>
-                <li>Window sill & track detailing</li>
-                <li>Final sweep, mop & touch-ups</li>
-              </ul>
-            </div>
+  <section class="services-grid py-5 bg-light">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Basic Cleaning -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="service-card h-100 p-4">
+            <i class="bi bi-house-door-fill fs-1 text-brand mb-3"></i>
+            <h3 class="mb-2">Basic Cleaning</h3>
+            <p class="text-muted mb-3">Perfect for monthly or weekly touch-ups.</p>
+            <ul class="feature-list mb-3">
+              <li>Dust & wipe surfaces</li>
+              <li>Vacuum & mop floors</li>
+              <li>Sanitize high-touch spots</li>
+              <li>Empty trash & liners</li>
+            </ul>
+            <a
+              href="https://calendly.com/alvizurezvero28/30min"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+            >Book Basic</a>
           </div>
         </div>
 
-        <!-- CTA -->
-        <div class="text-center mt-5">
-          <a
-            href="https://calendly.com/alvizurezvero28/30min"
-            target="_blank"
-            class="btn btn-lg btn-primary px-5"
-          >
-            Book Your Cleaning
-          </a>
+        <!-- Deep Cleaning -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card h-100 p-4">
+            <i class="bi bi-droplet fs-1 text-brand mb-3"></i>
+            <h3 class="mb-2">Deep Cleaning</h3>
+            <p class="text-muted mb-3">A thorough top-to-bottom refresh.</p>
+            <ul class="feature-list mb-3">
+              <li>Baseboards & vents</li>
+              <li>Behind & under furniture</li>
+              <li>Window tracks & sills</li>
+              <li>Cabinets & shelves</li>
+            </ul>
+            <a
+              href="https://calendly.com/alvizurezvero28/30min"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+            >Book Deep</a>
+          </div>
+        </div>
+
+        <!-- Move-In/Out -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card h-100 p-4">
+            <i class="bi bi-box-seam fs-1 text-brand mb-3"></i>
+            <h3 class="mb-2">Move-In / Move-Out</h3>
+            <p class="text-muted mb-3">Seamless transitions for any property.</p>
+            <ul class="feature-list mb-3">
+              <li>Cabinet & drawer clean</li>
+              <li>Appliance interior/exterior</li>
+              <li>Floor sweep & mop</li>
+              <li>Complete bathroom sanitize</li>
+            </ul>
+            <a
+              href="https://calendly.com/alvizurezvero28/30min"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+            >Book Move-Out</a>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- Footer -->
+  <!-- Footer with Certifications & Eco-Badge -->
   <footer class="bg-light py-4 text-center mt-auto">
+    <div class="certifications mb-3">
+      <img src="images/bbb.png" alt="BBB Accredited" class="mx-2" style="height:40px;">
+      <i class="bi bi-leaf-fill text-success fs-2 mx-2"></i>
+      <span class="fs-6 text-muted">Eco-Friendly Products</span>
+    </div>
     <small>&copy; 2025 Sanchez Cleaning</small>
   </footer>
 
-  <!-- Bootstrap JS & Custom JS -->
+  <!-- AOS & Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
+    defer
+  ></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"
+    defer
   ></script>
-  <script src="js/scripts.js"></script>
+  <!-- Custom JS: counts & nav collapse -->
+  <script src="js/scripts.js" defer></script>
 </body>
 </html>

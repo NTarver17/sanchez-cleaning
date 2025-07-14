@@ -123,15 +123,6 @@ body {
   font-style: italic;
 }
 
-#testimonials .card {
-  transition: transform 0.2s ease;
-}
-#testimonials .card:hover {
-  transform: translateY(-5px);
-}
-#testimonials img {
-  object-fit: cover;
-}
 
 /*=============================================================================
   5. Proof-Strip
@@ -215,125 +206,200 @@ body {
 /*=============================================================================
   10. Services Page—Enhanced Styling
 =============================================================================*/
+
+/* 1) Hero Banner */
+
 .services-hero {
-  background-color: #f58220;
-  background-image: url('../images/hero-abstract.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.services-hero .display-5 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.services-hero .lead {
-  font-size: 1.25rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.service-card {
-  border: none;
-  border-radius: 0.75rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
-}
-
-.service-icon {
-  font-size: 2.5rem;
-  color: #f58220;
-  margin-bottom: 1rem;
-}
-
-.feature-list {
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-}
-
-.feature-list li {
   position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.8rem;
+  background: url('../images/services-hero.jpg') center/cover no-repeat;
+  height: 50vh; min-height: 300px;
+  display: flex; align-items: center; justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 70%;
 }
 
-.feature-list li::before {
-  content: "\f111";
-  font-family: "bootstrap-icons";
-  position: absolute;
-  left: 0;
-  top: 0.25em;
-  font-size: 0.5rem;
+.services-hero .overlay {
+  position: absolute; inset: 0; background: rgba(0,0,0,0.5);
+}
+.services-hero .display-4 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  z-index: 1;
+}
+.services-hero .lead,
+.services-hero .btn-light {
+  z-index: 1;
+}
+
+/* 2) Stats Counter */
+.stats-section .stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
   color: #f58220;
+}
+.stats-section .stat-label {
+  color: #555;
+  margin-top: .25rem;
+}
+
+/* 3) Service Cards */
+.services-grid .service-card {
+  background: #fff;
+  border-radius: .75rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.05);
+  transition: transform .3s, box-shadow .3s;
+  display: flex; flex-direction: column;
+}
+.services-grid .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.1);
+}
+.services-grid .service-card i {
+  color: #f58220;
+}
+.services-grid .pricing {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+.feature-list {
+  list-style: none; padding-left: 0;
+}
+.feature-list li {
+  position: relative; padding-left: 1.5rem; margin-bottom: .5rem;
+}
+.feature-list li::before {
+  content: "\f111"; /* circle */
+  font-family: "bootstrap-icons";
+  position: absolute; left: 0; top: .2em;
+  font-size: .6rem; color: #f58220;
+}
+
+/* 4) Sticky CTA */
+.book-now-sticky {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 1000;
+}
+
+/* 5) Responsive */
+@media (max-width:768px) {
+  .services-hero .display-4 { font-size: 2rem; padding: 0 1rem; }
+  .stats-section { text-align: center; }
+  .stats-section .col-6 { margin-bottom: 1.5rem; }
 }
 
 /*=============================================================================
-  11. Testimonials Page Styling
+  Testimonials Page Styles
 =============================================================================*/
+
+/* Hero Banner */
 .testimonials-hero {
-  background-color: #f58220;
-  background-image: url('../images/testimonials-bg.jpg');
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  background: url('../images/testimonials-hero.jpg') center/cover no-repeat;
+  background-position: 50% 47%;
+  height: 40vh;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonials-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.testimonials-hero .display-4 {
+  position: relative;
+  z-index: 1;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
   color: #fff;
-  padding: 4rem 0;
-  text-align: center;
 }
-
-.testimonials-hero .display-5 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
 .testimonials-hero .lead {
-  font-size: 1.25rem;
-  max-width: 600px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  color: #f0f0f0;
 }
 
-.testimonial-card {
-  border-radius: 0.75rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 2rem 1rem;
+/* Testimonials Section */
+#testimonials {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+}
+#testimonials h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+/* Testimonial Cards */
+#testimonials .testimonial-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#testimonials .testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-card .icon {
-  font-size: 2.5rem;
-  color: #f58220;
-  margin-bottom: 1rem;
+/* Avatar */
+#testimonials .testimonial-card img.rounded-circle {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
 }
 
-.testimonial-card p {
+/* Reviewer Name & Role */
+#testimonials .testimonial-card h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+#testimonials .testimonial-card small.text-muted {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Quote */
+#testimonials .testimonial-card p {
   font-style: italic;
   color: #555;
   margin-bottom: 1rem;
 }
 
-.testimonial-card h6 {
-  margin-bottom: 0.25rem;
-  color: #333;
+/* Star Rating */
+#testimonials .testimonial-card .bi-star-fill {
+  color: #f58220;
+  margin-right: 0.125rem;
 }
 
-.testimonial-card small {
-  color: #777;
+/* Sticky “Book Now” Button */
+.book-now-sticky {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
 }
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .testimonials-hero {
+    height: 30vh;
+  }
+  .testimonials-hero .display-4 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  #testimonials .testimonial-card {
+    text-align: center;
+  }
+  #testimonials .testimonial-card .d-flex {
+    justify-content: center;
+  }
+}
+
 
 /*=============================================================================
   12. Contact Page Enhancements

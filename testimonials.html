@@ -5,23 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Testimonials – Sanchez Cleaning</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap v5 CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
     crossorigin="anonymous"
   />
+
   <!-- Bootstrap Icons -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     rel="stylesheet"
   />
-  <!-- Custom CSS -->
+
+  <!-- AOS CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+
+  <!-- Your custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-   <!-- Offer Banner -->
+  <!-- Offer Banner -->
   <div class="offer-banner text-center text-white py-2">
     <strong>Unlock a Sparkling Home:</strong>
     Save <span class="fw-bold">10%</span> on your first Deep Clean—offer expires <u>Aug 1st</u>!
@@ -31,7 +42,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/favicon.ico" class="brand-logo" alt="Logo" />
+        <img src="images/logo.png" alt="Logo" class="brand-logo" />
         <span class="brand-text">Sanchez Cleaning</span>
       </a>
       <button
@@ -56,74 +67,297 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="testimonials-hero">
-    <div class="container text-center text-white">
-      <h1 class="display-5 fw-bold">Real Stories. Real Peace of Mind.</h1>
-      <p class="lead">
-        See how we’ve transformed homes—and given families back their time.
+  <!-- Hero Banner -->
+  <section class="testimonials-hero d-flex align-items-center text-center text-white">
+    <div class="overlay"></div>
+    <div class="container" data-aos="fade-down">
+      <h1 class="display-4 fw-bold mb-3">What Our Clients Say</h1>
+      <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
+        Hear from real homeowners who trust us to keep their spaces spotless.
       </p>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <main class="flex-grow-1">
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="testimonial-card h-100">
-              <div class="icon"><i class="bi bi-quote"></i></div>
-              <p>“Sanchez Cleaning transformed my home—spotless, friendly, on time. Highly recommend!”</p>
-              <h6 class="mt-4">Jane Doe</h6>
-              <small>Austin, TX</small>
+  <!-- Testimonials Grid (9 cards) -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- 1 -->
+        <div class="col-sm-6 col-md-4" data-aos="fade-up">
+          <div class="testimonial-card h-100 p-4 shadow-sm bg-white rounded">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="https://randomuser.me/api/portraits/women/65.jpg"
+                alt="Jane Doe"
+                class="rounded-circle me-3"
+                width="60" height="60"
+              />
+              <div>
+                <h5 class="mb-0">Jane Doe</h5>
+                <small class="text-muted">Teacher, Austin, TX</small>
+              </div>
             </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="testimonial-card h-100">
-              <div class="icon"><i class="bi bi-quote"></i></div>
-              <p>“Post-renovation deep clean was incredible—never seen my kitchen so bright!”</p>
-              <h6 class="mt-4">John Smith</h6>
-              <small>Dallas, TX</small>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="testimonial-card h-100">
-              <div class="icon"><i class="bi bi-quote"></i></div>
-              <p>“Move-out service made handover a breeze. No stress, no last-minute scrambles.”</p>
-              <h6 class="mt-4">Emily R.</h6>
-              <small>San Antonio, TX</small>
+            <p class="text-muted mb-3">
+              “Sandra and her team are lifesavers! My home hasn’t looked this good in years—spotless, on time, and with a smile.”
+            </p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
             </div>
           </div>
         </div>
 
-        <!-- CTA -->
-        <div class="text-center mt-5">
-          <a
-            href="https://calendly.com/alvizurezvero28/30min"
-            target="_blank"
-            class="btn btn-lg btn-primary px-5"
-          >
-            Ready for Your Transformation?
-          </a>
+        <!-- 2 -->
+        <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card h-100 p-4 shadow-sm bg-white rounded">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="https://randomuser.me/api/portraits/men/44.jpg"
+                alt="John Smith"
+                class="rounded-circle me-3"
+                width="60" height="60"
+              />
+              <div>
+                <h5 class="mb-0">John Smith</h5>
+                <small class="text-muted">Airbnb Host, Dallas, TX</small>
+              </div>
+            </div>
+            <p class="text-muted mb-3">
+              “Our guests can’t stop raving about the cleanliness. Quick turnovers and flawless results every time!”
+            </p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
         </div>
+
+        <!-- 3 -->
+        <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card h-100 p-4 shadow-sm bg-white rounded">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="https://randomuser.me/api/portraits/women/50.jpg"
+                alt="Emily Davis"
+                class="rounded-circle me-3"
+                width="60" height="60"
+              />
+              <div>
+                <h5 class="mb-0">Emily Davis</h5>
+                <small class="text-muted">Project Manager, Houston, TX</small>
+              </div>
+            </div>
+            <p class="text-muted mb-3">
+              “I love coming home on Fridays—Sandra’s team always leaves my apartment feeling brand new. Exceptional attention to detail!”
+            </p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-card h-100 p-4 shadow-sm bg-white rounded">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Michael Brown"
+                class="rounded-circle me-3"
+                width="60" height="60"
+              />
+              <div>
+                <h5 class="mb-0">Michael Brown</h5>
+                <small class="text-muted">Entrepreneur, San Antonio, TX</small>
+              </div>
+            </div>
+            <p class="text-muted mb-3">
+              “Professional, courteous, and thorough. They’ve become my go-to cleaning service—I’ll never look back!”
+            </p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="testimonial-card h-100 p-4 shadow-sm bg-white rounded">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="https://randomuser.me/api/portraits/women/22.jpg"
+                alt="Sarah Williams"
+                class="rounded-circle me-3"
+                width="60" height="60"
+              />
+              <div>
+                <h5 class="mb-0">Sarah Williams</h5>
+                <small class="text-muted">Business Owner, Fort Worth, TX</small>
+              </div>
+            </div>
+            <p class="text-muted mb-3">
+              “Their eco-friendly products and sparkling results keep me coming back. I trust no one else with my office!”
+            </p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="testimonial-card h-100 p-4 shadow-sm bg-white rounded">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="https://randomuser.me/api/portraits/men/58.jpg"
+                alt="David Lee"
+                class="rounded-circle me-3"
+                width="60" height="60"
+              />
+              <div>
+                <h5 class="mb-0">David Lee</h5>
+                <small class="text-muted">Software Engineer, Plano, TX</small>
+              </div>
+            </div>
+            <p class="text-muted mb-3">
+              “The quality went above and beyond. They paid attention to every nook and cranny—highly recommend!”
+            </p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="testimonial-card h-100 p-4 shadow-sm bg-white rounded">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="https://randomuser.me/api/portraits/women/12.jpg"
+                alt="Olivia Martinez"
+                class="rounded-circle me-3"
+                width="60" height="60"
+              />
+              <div>
+                <h5 class="mb-0">Olivia Martinez</h5>
+                <small class="text-muted">Mom & Blogger, Round Rock, TX</small>
+              </div>
+            </div>
+            <p class="text-muted mb-3">
+              “With three kids and two pets, I needed reliable help—Sandra’s team delivers every time, stress-free.”
+            </p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="700">
+          <div class="testimonial-card h-100 p-4 shadow-sm bg-white rounded">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="https://randomuser.me/api/portraits/men/75.jpg"
+                alt="Daniel Kim"
+                class="rounded-circle me-3"
+                width="60" height="60"
+              />
+              <div>
+                <h5 class="mb-0">Daniel Kim</h5>
+                <small class="text-muted">Consultant, Irving, TX</small>
+              </div>
+            </div>
+            <p class="text-muted mb-3">
+              “Their punctuality and professionalism make all the difference. Fantastic work and great communication!”
+            </p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="800">
+          <div class="testimonial-card h-100 p-4 shadow-sm bg-white rounded">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="https://randomuser.me/api/portraits/women/19.jpg"
+                alt="Sophia Patel"
+                class="rounded-circle me-3"
+                width="60" height="60"
+              />
+              <div>
+                <h5 class="mb-0">Sophia Patel</h5>
+                <small class="text-muted">Designer, Arlington, TX</small>
+              </div>
+            </div>
+            <p class="text-muted mb-3">
+              “I’ve tried many cleaners, but none compare. Friendly staff, meticulous cleaning, and excellent value.”
+            </p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- Footer -->
+  <!-- Footer with Certifications & Eco-Badge -->
   <footer class="bg-light py-4 text-center mt-auto">
+    <div class="certifications mb-3">
+      <img src="images/bbb.png" alt="BBB Accredited" class="mx-2" style="height:40px;">
+      <i class="bi bi-leaf-fill text-success fs-2 mx-2"></i>
+      <span class="fs-6 text-muted">Eco-Friendly Products</span>
+    </div>
     <small>&copy; 2025 Sanchez Cleaning</small>
   </footer>
-
-  <!-- JS -->
+  
+  <!-- AOS & Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"
+    defer
   ></script>
-  <script src="js/scripts.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js" defer></script>
+
 </body>
 </html>
